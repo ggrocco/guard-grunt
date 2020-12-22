@@ -1,0 +1,28 @@
+require:
+  - rubocop-performance
+
+AllCops:
+  NewCops: enable
+  SuggestExtensions: false
+  TargetRubyVersion: 2.5
+  Exclude:
+    - bin/**/*
+    - vendor/ruby/**/*
+    - .irbrc
+
+Style/Documentation:
+  Enabled: false
+
+Layout/LineLength:
+ Max: 120
+
+Metrics/ClassLength:
+  Max: 300
+
+Metrics/MethodLength:
+  Max: 25
+
+Metrics/BlockLength:
+  Exclude:
+    - guard-grunt.gemspec
+    - spec/**/*.rb

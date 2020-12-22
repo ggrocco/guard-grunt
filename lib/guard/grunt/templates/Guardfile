@@ -1,4 +1,6 @@
+# frozen_string_literal: true
+
 ### Guard::Grunt
 guard 'grunt' do
-  watch(%r{^Gruntfile.js$})
+  watch(/^Gruntfile.js$/)
 end

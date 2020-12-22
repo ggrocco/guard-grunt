@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'guard/compat/plugin'
 require 'mkmf'
 require 'timeout'
@@ -14,6 +16,7 @@ module Guard
 
     def start
       return unless @grunt_installed
+
       stop
       UI.info 'Starting grunt...'
       UI.info cmd
@@ -50,7 +53,7 @@ module Guard
     end
 
     # Called on file(s) modifications
-    def run_on_modifications(paths)
+    def run_on_modifications(_paths)
       restart
     end
 
